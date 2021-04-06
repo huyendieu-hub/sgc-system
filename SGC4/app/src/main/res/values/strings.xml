@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SGC4</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_fragment">Hello blank fragment</string>
+    <string name="gift_fragment">Hello gift fragment</string>
+    <string name="camera_fragment">Hello camera fragment</string>
+    <string name="noti_fragment">Hello noti fragment</string>
+    <string name="user_fragment">Hello user fragment</string>
+
+    <string name="tab_1">Trang chủ</string>
+    <string name="tab_2">Quà tặng</string>
+    <string name="tab_3">Phân loại</string>
+    <string name="tab_4">Thông báo</string>
+    <string name="tab_5">Tài khoản</string>
+
+    <string name="menu_gioithieu">Giới thiệu</string>
+    <string name="menu_huongdan">Hướng dẫn sử dụng</string>
+    <string name="menu_datlich">Đặt lịch thu gom</string>
+    <string name="menu_moibanbe">Mời bạn bè</string>
+    <string name="menu_dangky">Đăng ký thành viên thu gom</string>
+    <string name="menu_doitac">Đối tác môi trường</string>
+    <string name="menu_phanhoi">Phản hồi</string>
+    <string name="menu_caunoi">Ứng dụng hỗ trợ phân loại và thu gom rác thải tại nguồn</string>
+</resources>

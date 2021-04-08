@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -19,9 +20,22 @@
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbarmanhinhchinh"
                 android:background="#5BAF5E"
-                app:title="Trang chính"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
+                <ImageView
+                    android:id="@+id/menu_drawer"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/iconmenu"
+                    ></ImageView>
+                <ImageView
+                    android:id="@+id/menu_drawer1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ava"
+                    android:layout_gravity="end"
+                    android:layout_marginRight="20dp"
+                    ></ImageView>
             </androidx.appcompat.widget.Toolbar>
            <LinearLayout
                android:layout_width="match_parent"

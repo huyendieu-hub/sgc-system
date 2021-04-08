@@ -23,18 +23,236 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize">
             </androidx.appcompat.widget.Toolbar>
-            <LinearLayout
-                android:background="#B4C320"
-                android:orientation="vertical"
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="300dp"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:text="ĐIỂM ĐẶT BOX"
+                   android:textColor="#1A5E1D"
+                   android:textSize="20sp"
+                   android:textStyle="bold"
+                   android:textAlignment="textEnd"
+                   android:gravity="end"
+                   android:layout_marginRight="40dp">
+               </TextView>
+               <LinearLayout
+                   android:layout_gravity="end"
+                   android:id="@+id/box1"
+                   android:padding="10dp"
+                   android:layout_width="200dp"
+                   android:layout_height="100dp"
+                   android:orientation="vertical"
+                   android:background="#ffff"
+                   android:layout_marginRight="10dp">
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Quận Cầu Giấy"
+                       android:textAlignment="center"
+                       android:gravity="center_horizontal">
+                   </TextView>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="1. 79 Đường Hồ Tùng Mậu , Mai Dịch , Cầu Giấy , Hà Nội , Việt Nam , Đại học Thương Mại"
+                       android:textSize="10sp">
+                   </TextView>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="2. Hà Đô Park View Phố Thành Thái"
+                       android:textSize="10sp">
+                   </TextView>
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_gravity="end"
+                   android:id="@+id/box2"
+                   android:padding="10dp"
+                   android:layout_width="200dp"
+                   android:layout_height="100dp"
+                   android:orientation="vertical"
+                   android:background="#ffff"
+                   android:layout_marginTop="10dp"
+                   android:layout_marginRight="10dp"
+                   >
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="Quận Cầu Giấy"
+                       android:textAlignment="center"
+                       android:gravity="center_horizontal">
+                   </TextView>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="1. 79 Đường Hồ Tùng Mậu , Mai Dịch , Cầu Giấy , Hà Nội , Việt Nam , Đại học Thương Mại"
+                       android:textSize="10sp">
+                   </TextView>
+                   <TextView
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:text="2. Hà Đô Park View Phố Thành Thái"
+                       android:textSize="10sp">
+                   </TextView>
+               </LinearLayout>
+               <Button
+                   android:layout_marginTop="10dp"
+                   android:layout_gravity="center"
+                   android:id="@+id/button10"
+                   android:layout_width="293dp"
+                   android:layout_height="44dp"
+                   android:text="Hướng dẫn phân loại rác"
+                   app:backgroundTint="#3B973E"></Button>
+           </LinearLayout>
+            <ImageView
                 android:layout_width="match_parent"
-                android:layout_height="300dp">
-            </LinearLayout>
-            <ViewFlipper
-                android:background="@android:color/holo_purple"
-                android:id="@+id/viewfliper"
+                android:layout_height="160dp"
+                android:src="@drawable/thongdiep1"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                >
+            </ImageView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="200dp">
-            </ViewFlipper>
+                android:layout_height="200dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="Bảng vàng thu gom"
+                    android:textColor="#1E6721"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/textView31"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="200dp"
+                    android:layout_height="17dp"
+                    android:layout_gravity="end"
+                    android:text="Hôm nay"
+                    android:textAlignment="center"
+                    android:textColor="#1E6721"
+                    app:layout_constraintEnd_toStartOf="@+id/textView32"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33"
+                    tools:ignore="RtlCompat"></TextView>
+
+                <TextView
+                    android:id="@+id/textView32"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="Tháng này"
+                    android:textAlignment="center"
+                    android:textColor="#1E6721"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/textView31"
+                    app:layout_constraintTop_toBottomOf="@+id/textView33"></TextView>
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:layout_width="51dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/ava"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.177"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.745"></ImageView>
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="51dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/ava"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.177"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.745"></ImageView>
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="51dp"
+                    android:layout_height="52dp"
+                    android:src="@drawable/ava"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.177"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.137"></ImageView>
+
+                <TextView
+                    android:id="@+id/textView34"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lê Thị Mai Anh"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.051"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.222"></TextView>
+
+                <TextView
+                    android:id="@+id/textView35"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lê Thị Mai Anh"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.051"
+                    app:layout_constraintStart_toEndOf="@+id/imageView5"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.637"></TextView>
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200 điểm"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.456"
+                    app:layout_constraintStart_toEndOf="@+id/textView34"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.222"></TextView>
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200 điểm"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.456"
+                    app:layout_constraintStart_toEndOf="@+id/textView34"
+                    app:layout_constraintTop_toBottomOf="@+id/textView32"
+                    app:layout_constraintVertical_bias="0.629"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager
+                android:id="@+id/AHBottomNavigationViewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager>
         </LinearLayout>
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navigation_view"
@@ -48,12 +266,6 @@
             </ListView>
         </com.google.android.material.navigation.NavigationView>
     </androidx.drawerlayout.widget.DrawerLayout>
-    <com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager
-        android:id="@+id/AHBottomNavigationViewPager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/AHBottomNavigation"
-        />
     <com.aurelhubert.ahbottomnavigation.AHBottomNavigation
         android:id="@+id/AHBottomNavigation"
         android:layout_width="match_parent"

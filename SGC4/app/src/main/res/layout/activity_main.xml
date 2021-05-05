@@ -18,7 +18,7 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer" />
--->
+    -->
     <androidx.drawerlayout.widget.DrawerLayout
         android:id="@+id/drawerlayout"
         android:layout_width="match_parent"
@@ -42,27 +42,25 @@
                     android:src="@drawable/iconmenu"
                     ></ImageView>
                 <ImageView
-                    android:id="@+id/menu_drawer1"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:src="@drawable/ava"
-                    android:layout_marginLeft="300dp"
-                    ></ImageView>
-                <ImageView
                     android:id="@+id/menu_drawer2"
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     android:layout_marginLeft="10dp"
+                    android:layout_gravity="end"
                     android:src="@drawable/logout"
+                    ></ImageView>
+                <ImageView
+                    android:id="@+id/menu_drawer1"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ava"
+                    android:layout_gravity="end"
                     ></ImageView>
             </androidx.appcompat.widget.Toolbar>
 
             <LinearLayout
-                android:background="#B4C320"
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="300dp">
-            </LinearLayout>
+                android:layout_height="400dp"/>
             <ViewFlipper
                 android:background="@android:color/holo_purple"
                 android:id="@+id/viewfliper"

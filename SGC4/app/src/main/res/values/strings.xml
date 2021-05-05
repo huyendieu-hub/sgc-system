@@ -8,13 +8,13 @@
     <string name="noti_fragment">Hello noti fragment</string>
     <string name="user_fragment">Hello user fragment</string>
 
-    <string name="tab_1">Trang chủ</string>
+    <string name="tab_1"><font fgcolor='#ffffff'>Trang chủ</font></string>
     <string name="tab_2">Quà tặng</string>
     <string name="tab_3">Phân loại</string>
     <string name="tab_4">Thông báo</string>
     <string name="tab_5">Tài khoản</string>
 
-    <string name="menu_gioithieu">Giới thiệu</string>
+    <string name="menu_gioithieu"><font fgcolor='#13a24a'>Giới thiệu</font></string>
     <string name="menu_huongdan">Hướng dẫn sử dụng</string>
     <string name="menu_datlich">Đặt lịch thu gom</string>
     <string name="menu_moibanbe">Mời bạn bè</string>
@@ -22,4 +22,42 @@
     <string name="menu_doitac">Đối tác môi trường</string>
     <string name="menu_phanhoi">Phản hồi</string>
     <string name="menu_caunoi">Ứng dụng hỗ trợ phân loại và thu gom rác thải tại nguồn</string>
+
+   <!-- home_fragment-->
+    <string name="home_setpoint_box">ĐIỂM ĐẶT BOX</string>
+    <string name="home_tutorial_box">Hướng dẫn phân loại rác</string>
+    <string name="home_board_yellow">Bảng vàng thu gom</string>
+    <string name="home_thisday">Hôm nay</string>
+    <string name="home_thismonth">Tháng này</string>
+
+   <!-- dangky-->
+    <string name="register_name_toolbar">Đăng ký thành viên thu gom</string>
+    <string name="register_contact">Liên hệ</string>
+    <string name="register_phonenumber_contact">+84 862362181</string>
+    <string name="register_downloadapp">Tải App SGC Collector</string>
+    <string name="register_text_downloadapp">Lorem ipsum dolor sit</string>
+
+    <!--datlich-->
+    <string name="schedule_name_toolbar">Đăng ký thành viên thu gom</string>
+    <string name="schedule_city_provincial">Thành Phố/Tỉnh</string>
+    <string name="schedule_District">Quận/Huyện</string>
+    <string name="schedule_address">Địa chỉ cụ thể</string>
+    <string name="schedule_day">Ngày thu gom</string>
+    <string name="schedule_day_month_year">Ngày/Tháng/Năm</string>
+    <string name="schedule_time">Giờ cụ thể</string>
+    <string name="schedule_select_time">Chọn giờ</string>
+    <string name="schedule_Note">Ghi chú</string>
+    <string name="schedule_regis_collect">Đăng ký thu gom</string>
+
+    <!--phanloairac-->
+    <string name="classify_toolbar">Phân loại rác</string>
+    <string name="classify_information_trash">Thông tin Rác</string>
+    <string name="classify_name_trash">Tên rác:</string>
+    <string name="classify_typeOfTrash">Loại rác:</string>
+    <string name="classify_trash_can">Thùng rác:</string>
+    <string name="classify_trash_amount">Số lượng Rác</string>
+    <string name="classify_put_box">Đặt tại Box"</string>
+    <string name="classify_regis_collect">Đăng ký thu gom</string>
+
+
 </resources>

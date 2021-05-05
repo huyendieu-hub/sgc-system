@@ -38,10 +38,10 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="VD : 0123456789"
-        android:textColor="#C1CDC8"
+        android:textColor="#D4D6D5"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="377dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="377dp" />
 
     <Button
         android:id="@+id/button"

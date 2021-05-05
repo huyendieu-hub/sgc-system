@@ -22,9 +22,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:text="Đăng ký thành viên thu gom"
+            android:text="@string/register_name_toolbar"
             android:textColor="#ffff"
-            android:textSize="25dp"></TextView>
+            android:textSize="25sp"></TextView>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -42,20 +42,22 @@
             android:id="@+id/textView14"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Liên hệ"
+            android:text="@string/register_contact"
             android:layout_gravity="center"
             android:textColor="#056839"
             android:textColorLink="#23BF29"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="330dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:text="+84 862362181"
+            android:textSize="20sp"
+            android:padding="5dp"
+            android:text="@string/register_phonenumber_contact"
             android:textColor="#070707"
             app:backgroundTint="#d7e9f8" />
         <TextView
@@ -63,20 +65,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            android:text="Tải App SGC Collector"
+            android:text="@string/register_downloadapp"
             android:layout_gravity="center"
             android:textColor="#056839"
             android:textColorLink="#23BF29"
-            android:textSize="30sp"
+            android:textSize="35sp"
             android:textStyle="bold"/>
 
         <Button
             android:id="@+id/button9"
-            android:layout_width="329dp"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
+            android:padding="5dp"
             android:layout_gravity="center"
-            android:text="Lorem ipsum dolor sit"
+            android:textSize="20dp"
+            android:text="@string/register_phonenumber_contact"
             android:textColor="#1B1A1A"
             app:backgroundTint="#d7e9f8" />
     </LinearLayout>

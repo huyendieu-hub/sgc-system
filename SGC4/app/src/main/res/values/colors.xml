@@ -7,9 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="color_tab_1">#58CF5D</color>
-    <color name="color_tab_2">#58CF5D</color>
-    <color name="color_tab_3">#58CF5D</color>
-    <color name="color_tab_4">#58CF5D</color>
-    <color name="color_tab_5">#58CF5D</color>
+    <color name="red">#F44336</color>
+    <color name="icon_bottom_color_active">#ffffff</color>
+    <color name="icon_bottom_color_notactive">#ededef</color>
+    <color name="drawer_color">#13a24a</color>
+    <color name="spinner">#5CDFDA</color>
 </resources>

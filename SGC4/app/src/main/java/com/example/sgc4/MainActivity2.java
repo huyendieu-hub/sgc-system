@@ -3,35 +3,29 @@ package com.example.sgc4;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.widget.Toolbar;
-
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
-import android.text.Html;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.ViewFlipper;
 
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigation;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationItem;
 import com.aurelhubert.ahbottomnavigation.AHBottomNavigationViewPager;
-import com.aurelhubert.ahbottomnavigation.notification.AHNotification;
 import com.google.android.material.navigation.NavigationView;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
     private AHBottomNavigation ahBottomNavigation;
     private AHBottomNavigationViewPager ahBottomNavigationViewPager;
     private ViewPagerAdapter adapter;
@@ -48,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         //Anhxa
         Anhxa();
         Actionbar();
@@ -63,9 +56,9 @@ public class MainActivity extends AppCompatActivity {
 
         AHBottomNavigationItem item1 = new AHBottomNavigationItem(R.string.tab_1, R.drawable.home, R.color.icon_bottom_color_active);
         AHBottomNavigationItem item2 = new AHBottomNavigationItem(R.string.tab_2, R.drawable.qua, R.color.icon_bottom_color_active);
-        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.tab_3, R.drawable.icon_camera, R.color.icon_bottom_color_active);
+        AHBottomNavigationItem item3 = new AHBottomNavigationItem(R.string.tab_3, R.drawable.qua, R.color.icon_bottom_color_active);
         AHBottomNavigationItem item4 = new AHBottomNavigationItem(R.string.tab_4, R.drawable.bell, R.color.icon_bottom_color_active);
-        AHBottomNavigationItem item5 = new AHBottomNavigationItem(R.string.tab_5, R.drawable.icon_user, R.color.icon_bottom_color_active);
+        AHBottomNavigationItem item5 = new AHBottomNavigationItem(R.string.tab_5, R.drawable.qua, R.color.icon_bottom_color_active);
 
         ahBottomNavigation.addItem(item1);
         ahBottomNavigation.addItem(item2);
@@ -73,19 +66,7 @@ public class MainActivity extends AppCompatActivity {
         ahBottomNavigation.addItem(item4);
         ahBottomNavigation.addItem(item5);
 
-        //background Color
-        ahBottomNavigation.setDefaultBackgroundColor(Color.parseColor("#0ba14b"));
 
-        //icon color
-        ahBottomNavigation.setAccentColor(getResources().getColor(R.color.icon_bottom_color_active));
-        ahBottomNavigation.setInactiveColor(getResources().getColor(R.color.icon_bottom_color_notactive));
-
-        AHNotification notification = new AHNotification.Builder()
-                .setText("1")
-                .setBackgroundColor(ContextCompat.getColor(MainActivity.this, R.color.red))
-                .setTextColor(ContextCompat.getColor(MainActivity.this, R.color.white))
-                .build();
-        ahBottomNavigation.setNotification(notification, 3);
 
         ahBottomNavigation.setOnTabSelectedListener(new AHBottomNavigation.OnTabSelectedListener() {
             @Override
@@ -112,6 +93,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    //thongdiepslide
     private void ActionViewFlipper() {
         ArrayList<String> mangquangcao = new ArrayList<>(); /*cấp phát vùng bộ nhớ*/
         mangquangcao.add("@drawable/thongdiep1");
@@ -137,6 +120,7 @@ public class MainActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listviewmanhinhchinh);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawerlayout);
     }
+
 
     private void Actionbar() {
         setSupportActionBar(toolbar);

@@ -13,5 +13,4 @@
         android:text="@string/camera_fragment"
         android:textSize="20sp"
         android:layout_margin="16dp"/>
-
 </FrameLayout>

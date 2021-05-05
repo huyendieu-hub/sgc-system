@@ -35,12 +35,12 @@
     </androidx.appcompat.widget.Toolbar>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="256dp"
-        android:layout_height="352dp"
+        android:layout_width="269dp"
+        android:layout_height="386dp"
         android:background="#00E8F1E8"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="134dp">
+        tools:layout_editor_absoluteY="100dp">
 
         <TextView
             android:id="@+id/textView6"
@@ -75,14 +75,6 @@
             tools:layout_editor_absoluteY="21dp" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="222dp"
-            android:layout_height="24dp"
-            app:backgroundTint="#88C9D1"
-            tools:layout_editor_absoluteX="19dp"
-            tools:layout_editor_absoluteY="40dp" />
-
-        <Button
             android:id="@+id/button5"
             android:layout_width="222dp"
             android:layout_height="24dp"
@@ -115,6 +107,14 @@
             app:backgroundTint="#146D95"
             tools:layout_editor_absoluteX="64dp"
             tools:layout_editor_absoluteY="244dp" />
+
+        <Spinner
+            android:background="@drawable/ic_down"
+            android:id="@+id/spinner"
+            android:layout_width="232dp"
+            android:layout_height="19dp"
+            tools:layout_editor_absoluteX="18dp"
+            tools:layout_editor_absoluteY="49dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

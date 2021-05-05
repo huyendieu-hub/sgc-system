@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    tools:showIn="navigation_view">
-
-    <group android:checkableBehavior="single">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_gioithieu"
             android:icon="@drawable/gioithieu"
-            android:title="@string/menu_gioithieu" />
+            android:title="@string/menu_gioithieu"
+            />
         <item
             android:id="@+id/nav_huongdan"
             android:icon="@drawable/huongdan"
@@ -32,5 +30,5 @@
             android:id="@+id/nav_phanhoi"
             android:icon="@drawable/phanhoi"
             android:title="@string/menu_phanhoi" />
-    </group>
+        </group>
 </menu>

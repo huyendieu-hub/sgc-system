@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header-table'); -%>
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <!-- Sidebar -->
+            <%- include('layouts/navbar'); -%>
+                <!-- End of Sidebar -->
+
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <!-- Topbar -->
+                        <%- include('layouts/topbar'); -%>
+                            <!-- End of Topbar -->
+
+                            <!-- Begin Page Content -->
+                            <div class="container-fluid">
+
+                                <!-- Page Heading -->
+                                <h1 class="h3 mb-2 text-gray-800">List User</h1>
+                                <!-- <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the <a target="_blank" href="https://datatables.net">official DataTables documentation</a>.</p> -->
+
+                                <!-- DataTales Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">DataTables</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="table-responsive">
+                                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>First Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>Date of birth</th>
+                                                        <th>Gender</th>
+                                                        <th>Phone number</th>
+                                                        <th>Address</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>First Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>Date of birth</th>
+                                                        <th>Gender</th>
+                                                        <th>Phone number</th>
+                                                        <th>Address</th>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <% Users.forEach((user) => { %>
+                                                        <tr ondblclick="handleUpdateProduct('<%= user.userId %>')">
+                                                            <td>
+                                                                <%= user.userId %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.firstname %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.lastname %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.dateOfBirth %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.gender %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.phoneNumber %>
+                                                            </td>
+                                                            <td>
+                                                                <%= user.address %>
+                                                            </td>
+                                                            <td>
+                                                                <input class="btn btn-primary btn-user" type="button" value="Detail" onclick="handleUpdateProduct('<%= user.userId %>')">
+                                                            </td>
+                                                        </tr>
+                                                        <% }) %>
+                                                </tbody>
+                                            </table>
+                                            <script>
+                                                function handleUpdateProduct(value) {
+                                                    $(location).attr('href', '/information-user/' + value);
+                                                }
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.container-fluid -->
+
+                    </div>
+                    <!-- End of Main Content -->
+
+                    <!-- Footer -->
+                    <%- include('layouts/footer'); -%>
+                        <!-- End of Footer -->
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <%- include('layouts/logout'); -%>
+
+            <%- include('layouts/script-table'); -%>
+
+    </body>
+
+</html>

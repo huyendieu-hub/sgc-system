@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('layouts/navbar'); -%>
+
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <%- include('layouts/topbar'); -%>
+
+                            <!-- BOdy-->
+
+                            <!-- Begin Page Content -->
+                            <div class="container-fluid">
+                                <!-- Page Heading -->
+                                <h1 class="h3 mb-2 text-gray-800">Collection Member Information</h1>
+                                <!-- DataTales Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">Data Table</h6>
+                                        <a href="/create-collection-member" class="btn btn-primary btn-user">Create Collection Member</a>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/collection-member-information/<%= CollectionMember._id %>" method="POST">
+                                            <div class="form-group">
+                                                <label>ID</label>
+                                                <input name="collectorId" class="form-control" value="<%= CollectionMember._id %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firstname">Firstname</label>
+                                                <input type="text" id="firstname" name="firstname" class="form-control" value="<%= CollectionMember.firstname %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lastname">Lastname</label>
+                                                <input type="tel" id="lastname" name="lastname" class="form-control" value="<%= CollectionMember.lastname %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dateOfBirth">Date Of Birth</label>
+                                                <input id="dateOfBirth" name="dateOfBirth" class="form-control" value="<%= CollectionMember.dateOfBirth %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender">Gender</label>
+                                                <input id="gender" name="gender" class="form-control" value="<%= CollectionMember.gender %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phoneNumber">Phone Number</label>
+                                                <input type="phoneNumber" id="phoneNumber" name="phoneNumber" class="form-control" value="<%= CollectionMember.phoneNumber %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="province">Province</label>
+                                                <input id="province" name="province" class="form-control" value="<%= CollectionMember.province %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="district">District</label>
+                                                <input id="district" name="district" class="form-control" value="<%= CollectionMember.district %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="wards">Wards</label>
+                                                <input id="wards" name="wards" class="form-control" value="<%= CollectionMember.wards %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="specificAddress">Specific Address</label>
+                                                <input id="specificAddress" name="specificAddress" class="form-control" value="<%= CollectionMember.specificAddress %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="district">Collector Name</label>
+                                                <input id="collectorName" name="collectorName" class="form-control" value="<%= CollectionMember.collectorName %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="avatar">Avatar Collection Member</label> <br>
+                                                <img src="/public/upload/<%= CollectionMember.avatar %>" style="width: 15em;">
+                                            </div>
+                                            <div class="form-group" style="display: flex; justify-content: space-between;">
+                                                <div class="btns"><a href="/list-collection-member" class="btn btn-primary">Return</a></div>
+
+                                                <div class="btns">
+                                                    <!-- <button type="submit" class="btn btn-primary" id="infoUpdate">Save</button> -->
+                                                    <button type="button" class="btn btn-primary" id="infoDelete" onclick="handleDeleteProduct('<%= CollectionMember.id %>')">Delete</button>
+                                                    <!-- <input id="infoDelete" class="btn btn-primary btn-create" type="button" value="Delete" onclick="handleDeleteProduct('<%= CollectionMember.id %>')"> -->
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end body-->
+
+                    </div>
+                    <!-- End of Main Content -->
+                    <script>
+                        function handleDeleteProduct(value) {
+                            $.ajax({
+                                url: '/member-information/' + value,
+                                type: 'DELETE',
+                                success: function(result) {
+                                    $(location).attr('href', '/list-collection-member');
+                                }
+                            })
+                        }
+                    </script>
+                    <%- include('layouts/footer'); -%>
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <%- include('layouts/logout'); -%>
+
+            <%- include('layouts/script'); -%>
+    </body>
+
+</html>

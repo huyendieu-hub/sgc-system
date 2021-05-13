@@ -1,0 +1,105 @@
+<script>
+
+    var districtObject = {
+        "TP. Hồ Chí Minh": {
+            "Quận 1": ["Tân Định", "Bến Nghé", "Bến Thành", "Đa Kao", "Cô Giang", "Cầu Kho", "Nguyễn Thái Bình", "Phạm Ngũ Lão", "Nguyễn Cư Trinh", "Cầu Ông Lãnh"],
+            "Quận 2": ["An Phú", "Thủ Thiêm", "Bình Trưng Tây", "Bình Trưng Đông", "An Lợi Đông", "An Khánh", "Cát Lái", "Thạnh Mỹ Lợi", "Bình An", "Thảo Điền", "Bình Khánh"],
+            "Quận 3": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14"],
+            "Quận 4": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 16", "Phường 18"],
+            "Quận 5": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15"],
+            "Quận 6": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14"],
+            "Quận 7": ["Tân Thuận Tây", "Tân Thuận Đông", "Tân Quy", "Tân Phong", "Tân Phú", "Tân Hưng", "Bình Thuận", "Phú Mỹ", "Tân Kiểng", "Phú Thuận"],
+            "Quận 8": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 16"],
+            "Quận 9": ["Long Bình", "Hiệp Phú", "Trường Thạnh", "Long Trường", "Tăng Nhơn Phú A", "Tăng Nhơn Phú B", "Phước Long A", "Phước Long B", "Phước Bình", "Phú Hữu", "Tân Phú", "Long Thạnh Mỹ", "Long Phước"],
+            "Quận 10": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15"],
+            "Quận 11": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 16"],
+            "Quận Phú Thuận": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 16", "Phường 17"],
+            "Quận Bình Thạch": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 16", "Phường 17"],
+            "Quận Tân Phú": ["Tân Sơn Nhì", "Tân Thạnh", "Sơn Kỳ", "Tân Quý", "Tân Thành", "Phú Thọ Hoà", "Phú Thạnh", "Phú Trung", "Hoà Thạnh", "Hiệp Tân", "Tân Thới Hoà"],
+            "Quận Tân Bình": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 8", "Phường 9", "Phường 10", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15"],
+            "Quận Gò Vấp": ["Phường 1", "Phường 2", "Phường 3", "Phường 4", "Phường 5", "Phường 6", "Phường 7", "Phường 11", "Phường 12", "Phường 13", "Phường 14", "Phường 15", "Phường 17", "Phường 19", "Phường 21", "Phường 22", "Phường 24", "Phường 25", "Phường 26", "Phường 27", "Phường 28"],
+
+        },
+        "Hà Nội": {
+            "Ba Đình": ["Phúc Xá", "Ngọc Hà", "Đội Cấn", "Ngọc Khánh", "Kim Mã", "Giảng Võ", "Thành Công", "Cống Vị", "Liễu Giai", "Vĩnh Phúc", "Điện Biên", "Trúc Bạch", "Quán Thánh", "Nguyễn Trung Trực"],
+            "Bắc Từ Liêm": ["Thụy Phương", "Liên Mạc", "Tây Tựu", "Minh Khai", "Thượng Cát", "Xuân Tảo", "Xuân Đỉnh", "Đông Ngạc", "Đức Thắng", "Phúc Diễn", "Cổ Nhuế 1", "Cổ Nhuế 2", "Phú Diễn"],
+            "Cầu Giấy": ["Nghĩa Đô", "Nghĩa Tân", "Mai Dịch", "Quan Hoa", "Dịch Vọng", "Dịch Vọng Hậu", "Yên Hòa", "Trung Hòa"],
+            "Đống Đa": ["Hàng Bột", "Văn Chương", "Thổ Quan", "Phương Liên", "Kim Liên", "Phương Mai", "Khương Thượng", "Thịnh Quang", "Trung Liệt", "Quang Trung", "Nam Đồng", "Ô Chợ Dừa", "Láng Hạ", "Láng Thượng", "Trung Phụng", "Ngã Tư Sở", "Trung Tự", "Khâm Thiên", "Quốc Tử Giám", "Cát Linh", "Văn Miếu"],
+            "Hà Đông": ["Phú Lãm", "Phú Lương", "Quang Trung", "Nguyễn Trãi", "Vạn Phúc", "Phúc La", "Hà Cầu", "Yết Kiêu", "Yên Nghĩa", "Văn Quán", "Mộ Lao", "La Khê", "Đồng Mai", "Dương Nội", "Kiến Hưng", "Phú La", "Biên Giang"],
+            "Hai Bà Trưng": ["Đồng Tâm", "Trương Định", "Minh Khai", "Vĩnh Tuy", "Bạch Đằng", "Thanh Lương", "Thanh Nhàn", "Bạch Mai", "Nguyễn Du", "Bùi Thị Xuân", "Lê Đại Hành", "Ngô Thì Nhậm", "Phố Huế", "Phạm Đình Hổ", "Đồng Nhân", "Đông Mác", "Ô Cầu Dền", "Bách Khoa", "Quỳnh Lôi", "Quỳnh Mai"],
+            "Hoàn Kiếm": ["Đồng Xuân", "Cửa Nam", "Chương Dương", "Phúc Tân", "Hàng Buồm", "Trần Hưng Đạo", "Tràng Tiền", "Lý Thái Tổ", "Hàng Trống", "Hàng Mã", "Hàng Bông", "Cửa Đông", "Hàng Bài", "Hàng Gai", "Hàng Bồ", "Phan Chu Trinh", "Hàng Bạc", "Hàng Đào"],
+            "Hoàng Mai": ["Đại Kim", "Định Công", "Hoàng Văn Thụ", "Hoàng Liệt", "Tân Mai", "Tương Mai", "Mai Động", "Lĩnh Nam", "Thịnh Liệt", "Giáp Bát", "Vĩnh Hưng", "Thanh Trì", "Yên Sở", "Trần Phú"],
+            "Long Biên": ["Ngọc Thụy", "Bồ Đề", "Đức Giang", "Thượng Thanh", "Ngọc Lâm", "Sài Đồng", "Thạch Bàn", "Long Biên", "Phúc Lợi", "Phúc Đồng", "Giang Biên", "Cự Khối", "Gia Thụy", "Việt Hưng"],
+            "Nam Từ Liêm": ["Mỹ Đình 1", "Mỹ Đình 2", "Mễ Trì", "Phú Đô", "Đại Mỗ", "Tây Mỗ", "Trung Văn", "Phương Canh", "Xuân Phương", "Cầu Diễn"],
+            "Tây Hồ": ["Yên Phụ", "Phú Thượng", "Thụy Khuê", "Xuân La", "Bưởi", "Tứ Liên", "Nhật Tân", "Quảng An"],
+            "Thanh Xuân": ["Thanh Xuân Bắc", "Thanh Xuân Trung", "Thanh Xuân Nam", "Khương Trung", "Phương Liệt", "Nhân Chính", "Khương Mai", "Thượng Đình", "Khương Đình", "Hạ Đình", "Kim Giang"],
+            "Sơn Tây": ["Trung Hưng", "Trung Sơn Trầm", "Lê Lợi", "Xuân Khanh", "Quang Trung", "Ngô Quyền", "Phú Thịnh", "Sơn Lộc", "Viên Sơn"],
+        },
+        "Hải Phòng": {
+            "Quận Dương Kinh": ["Phường Anh Dũng", "hường Tân Thành", "Phường Đa Phúc", "Phường Hoà Nghĩa", "Phường Hải Thành", "Phường Hưng Đạo"],
+            "Quận Đồ Sơn": ["Phường Ngọc Hải", "Phường Bàng La", "Phường Hợp Đức", "Phường Ngọc Xuyên", "Phường Vạn Sơn", "Phường Minh Đức", "Phường Vạn Hương"],
+            "Quận Hải An": ["Phường Cát Bi", "Phường Đằng Lâm", "Phường Đông Hải 1", "Phường Đông Hải 2", "Phường Nam Hải", "Phường Tràng Cát", "Phường Đằng Hải", "Phường Thành Tô"],
+            "Quận Hồng Bàng": ["Phường Hoàng Văn Thụ", "Phường Minh Khai", "Phường Phan Bội Châu", "Phường Hùng Vương", "Phường Quán Toan", "Phường Quang Trung", "Phường Sở Dầu", "Phường Thượng Lý", "Phường Hạ Lý", "Phường Trại Chuối", "Phường Phạm Hồng Thái"],
+            "Quận Kiến An": ["Phường Bắc Sơn", "Phường Đồng Hoà", "Phường Lãm Hà", "Phường Nam Sơn", "Phường Ngọc Sơn", "Phường Phù Liễn", "Phường Quán Trữ", "Phường Tràng Minh", "Phường Trần Thành Ngọ", "Phường Văn Đẩu"],
+            "Quận Lê Chân": ["Phường An Biên", "Phường An Dương", "Phường Cát Dài", "Phường Dư Hàng", "Phường Dư Hàng Kênh", "Phường Đông Hải", "Phường Hàng Kênh", "Phường Hồ Nam", "Phường Kênh Dương", "Phường Lam Sơn", "Phường Niệm Nghĩa", "Phường Nghĩa Xá", "Phường Trại Cau", "Phường Trần Nguyên Hãn", "Phường Vĩnh Niệm"],
+            "Quận Ngô Quyền": ["Phường Cầu Tre", " Phường Đông Khê", "Phường Đổng Quốc Bình", "Phường Đằng Giang", "Phường Gia Viên", " Phường Lạch Tray", "Phường Lê Lợi", "Phường Lạc Viên", "Phường Cầu Đất", "Phường Lương Khánh Thiện", "Phường Máy Chai", "Phường Vạn Mỹ", "Phường Máy Tơ"],
+            "Huyện An Dương": ["Thị trấn An Dương", "Xã An Đồng", "Xã An Hoà", "Xã An Hồng", "Xã An Hưng", "Xã Bắc Sơn", "Xã Đại Bản", "Xã Đặng Cương", "Xã Đồng Thái", "Xã Hồng Phong", "Xã Hồng Thái", "Xã Lê Lợi", "Xã Lê Thiện", "Xã Nam Sơn", "Xã Quốc Tuấn", "Xã Tân Tiến"],
+            "Huyện An Lão": ["Thị trấn An Lão", "Thị trấn Trường Sơn", "Xã An Tiến", "Xã An Thái", "Xã An Thắng", "Xã An Thọ", "Xã Bát Trang", "Xã Chiến Thắng", "Xã Mỹ Đức", "Xã Quang Hưng", "Xã Quang Trung", "Xã Quốc Tuấn", "Xã Tân Dân", "Xã Tân Viên", "Xã Thái Sơn", "Xã Trường Thành", "Xã Trường Thọ"],
+            "Huyện Đảo Bạch Long Vĩ": ["Không phân chia thành các đơn vị hành chính cấp xã"],
+            "Huyện đảo Cát Hải": ["Thị trấn Cát Bà", "Thị trấn Cát Hải", "Xã Đồng Bài", "Xã Gia Luận", "Xã Hiền Hào", "Xã Hoàng Châu", "Xã Nghĩa Lộ", "Xã Phù Long", "Xã Trân Châu", "Xã Văn Phong", "Xã Việt Hải", "Xã Xuân Đám"],
+            "Huyện Kiến Thụy": ["Thị trấn Núi Đối", "Xã Du Lễ", "Xã Đại Đồng", "Xã Đại Hà", "Xã Đại Hợp", "Xã Đoàn Xá", "Xã Đông Phương", "Xã Hữu Bằng", "Xã Kiến Quốc", "Xã Minh Tân", "Xã Ngũ Đoan", "Xã Ngũ Phúc", "Xã Tân Phong", "Xã Tân Trào", "Xã Tú Sơn", "Xã Thanh Sơn", "Xã Thuận Thiên", "Xã Thuỵ Hương"],
+            "Huyện Tiên Lãng": ["Thị trấn Tiên Lãng", "Xã Bạch Đằng", "Xã Bắc Hưng", "Xã Cấp Tiến", "Xã Đại Thắng", "Xã Đoàn Lập", "Xã Đông Hưng", "Xã Hùng Thắng", "Xã Kiến Thiết", "Xã Khởi Nghĩa", "Xã Nam Hưng", "Xã Quang Phục", "Xã Quyết Tiến", "Xã Tây Hưng", "Xã Tiên Cường", "Xã Tiên Hưng", "Xã Tiên Minh", "Xã Tiên Tiến", "Xã Tiên Thanh", "Xã Tiên Thắng", "Xã Toàn Thắng", "Xã Tự Cường", "Xã Vinh Quang"],
+            "Huyện Thủy Nguyên": ["Thị trấn Minh Đức", "Thị trấn Núi Đèo", "Xã An Lư", "Xã An Sơn", "Xã Cao Nhân", "Xã Chính Mỹ", "Xã Dương Quan", "Xã Đông Sơn", "Xã Gia Đức", "Xã Gia Minh", "Xã Hoà Bình", "Xã Hoa Động", "Xã Hoàng Động", "Xã Hợp Thành", "Xã Kênh Giang", "Xã Kiền Bái", "Xã Kỳ Sơn", "Xã Lại Xuân", "Xã Lâm Động", "Xã Lập Lễ", "Xã Liên Khê", "Xã Lưu Kiếm", "Xã Lưu Kỳ", "Xã Minh Tân", "Xã Mỹ Đồng", "Xã Ngũ Lão", "Xã Phả Lễ", "Xã Phù Ninh", "Xã Phục Lễ", "Xã Quảng Thanh", "Xã Tam Hưng", "Xã Tân Dương", "Xã Thiên Hương", "Xã Thuỷ Đường", "Xã Thuỷ Sơn", "Xã Thuỷ Triều", "Xã Trung Hà"],
+            "Huyện Vĩnh Bảo": ["Thị trấn Vĩnh Bảo", "Xã An Hoà", "Xã Cao Minh", "Xã Cổ Am", "Xã Cộng Hiền", "Xã Dũng Tiến", "Xã Đồng Minh", "Xã Giang Biên", "Xã Hiệp Hoà", "Xã Hoà Bình", "Xã Hùng Tiến", "Xã Hưng Nhân", "Xã Liên Am", "Xã Lý Học", "Xã Nhân Hoà", "Xã Tam Cường", "Xã Tam Đa", "Xã Tân Hưng", "Xã Tân Liên", "Xã Tiền Phong", "Xã Thanh Lương", "Xã Thắng Thuỷ", "Xã Trấn Dương", "Xã Trung Lập", "Xã Việt Tiến", "Xã Vĩnh An", "Xã Vĩnh Long", "Xã Vĩnh Phong", "Xã Vinh Quang", "Xã Vĩnh Tiến"],
+        },
+        "Cần Thơ": {
+            "Quận Ninh Kiều": ["An Bình", "An Cư", "An Hoà", "An Khánh", "An Nghiệp", "An Phú", "Cái Khế", "Hưng Lợi", "Tân An", "Thới Bình", "Xuân Khánh"],
+            "Quận Ô Môn": ["Châu Văn Liêm", "Long Hưng", "Phước Thới", "Thới An", "Thới Hoà", "Thới Long", "Trường Lạc"],
+            "Quận Cái Răng": ["Ba Láng", "Hưng Phú", "Hưng Thạnh", "Lê Bình", "Phú Thứ", "Tân Phú", "Thường Thạnh"],
+            "Quận Bình Thuỷ": ["An Thới", "Bình Thủy", "Bùi Hữu Nghĩa", "Long Hòa", "Long Tuyền", "Thới An Đông", "Trà An", "Trà Nóc"],
+            "Quận Cái Răng": ["Ba Láng", "Hưng Phú", "Hưng Thạnh", "Lê Bình", "Phú Thứ", "Tân Phú", "Thường Thạnh"],
+            "Quận Thốt Nốt": ["Thốt Nốt", "Tân Hưng", "Tân Lộc", "Thạnh Hoà", "Thới Thuận", "Thuận An", "Thuận Hưng", "Trung Kiên", "Trung Nhứt"],
+            "Huyện Vĩnh Thạnh": ["Thị trấn Vĩnh Thạnh", "Thị trấn Thạnh An", "Xã Thạnh An", "Xã Thạnh Lộc", "Xã Thạnh Lợi", "Xã Thạnh Mỹ", "Xã Thạnh Quới", "Xã Thạnh Thắng", "Xã Thạnh Tiến", "Xã Vĩnh Bình", "Xã Vĩnh Trinh"],
+            "Huyện Thới Lai": ["Định Môn", "Đông Bình", "Đông Thuận", "Tân Thạnh", "Thới Tân", "Thới Thạnh", "Trường Thắng", "Trường Thành", "Trường Xuân", "Trường Xuân A", "Trường Xuân B", "Xuân Thắng", "Thị trấn Thới Lai"],
+            "Huyện Cờ Đỏ": ["Đông Hiệp", "Đông Thắng", "Thạnh Phú", "Thới Đông", "Thới Hưng", "Thới Xuân", "Trung An", "Trung Hưng", "Trung Thạnh"],
+            "Huyện Phong Điền": ["Giai Xuân", "Mỹ Khánh", "Nhơn Ái", "Nhơn Nghĩa", "Tân Thới", "Trường Long"],
+        },
+        "Đà Nẵng": {
+            "Hải Châu": ["Hoà Cường Nam", "Hoà Cường Bắc", "Hoà Thuận Đông", "Hoà Thuận Tây", "Bình Thuận", "Bình Hiên", "Nam Dương", "Phước Ninh", "Hải Châu 1", "Hải Châu 2", "Thạch Thang", "Thanh Bình", "Thuận Phước"],
+            "Cẩm Lệ": ["Hoà Thọ Đông", "Hoà Thọ Tây", "Hoà An", "Hoà Phát", "Hoà Xuân", "Khuê Trung"],
+            "Thanh Khuê": ["An Khê", "Thanh Khê Tây", "Xuân Hà", "Tam Thuận", "Chính Gián", "Thạc Gián", "Vĩnh Trung", "Tân Chính", "Hoà Khê", "Thanh Khê Đông"],
+            "Liên Chiểu": ["Hoà Hiệp Nam", "Hoà Hiệp Bắc", "Hoà Khánh Nam", "Hoà Khánh Bắc", "Hoà Minh"],
+            "Ngũ Hành Sơn": ["Mỹ An", "Khuê Mỹ", "Hoà Hải", "Hoà Quý"],
+            "Sơn Trà": ["An Hải Bắc", "An Hải Đông", "An Hải Tây", "Mân Thái", "Nại Hiên Đông", "Phước Mỹ", "Thọ Quang"],
+            "Hòa Vang": ["Xã Hòa Châu", "Xã Hòa Tiến", "Xã Hòa Phước", "Xã Hòa Phong", "Xã Hòa Nhơn", "Xã Hòa Khương", "Xã Hòa Phú", "Xã Hòa Sơn", "Xã Hòa Ninh", "Xã Hòa Liên", "Xã Hòa Bắc"],
+            "Hoàng Sa": ["Đảo Hoàng Sa", "Đảo Đá Bắc", "Đảo Hữu Nhật", "Đảo Đá Lồi", "Đảo Bạch Quy", "Đảo Tri Tôn", "Đảo Cây", "Đảo Bắc", "Đảo Giữa", "Đảo Nam", "Đảo Phú Lâm", "Đảo Linh Côn", "Đảo Quang Hòa", "Cồn Bông Bay", "Cồn Quan Sát", "Cồn Cát Tây", "Đá Chim Yến", "Đá Tháp"],
+        },
+
+    }
+
+    window.onload = function() {
+        var provinceSel = document.getElementById("provinceSel"),
+            districtSel = document.getElementById("districtSel"),
+            wardsSel = document.getElementById("wardsSel");
+        for (var country in districtObject) {
+            provinceSel.options[provinceSel.options.length] = new Option(country, country);
+        }
+        provinceSel.onchange = function() {
+            districtSel.length = 1; // remove all options bar first
+            wardsSel.length = 1; // remove all options bar first
+            if (this.selectedIndex < 1) return; // done 
+            for (var district in districtObject[this.value]) {
+                districtSel.options[districtSel.options.length] = new Option(district, district);
+            }
+        }
+        provinceSel.onchange(); // reset in case page is reloaded
+        districtSel.onchange = function() {
+            wardsSel.length = 1; // remove all options bar first
+            if (this.selectedIndex < 1) return; // done 
+            var wards = districtObject[provinceSel.value][this.value];
+            for (var i = 0; i < wards.length; i++) {
+                wardsSel.options[wardsSel.options.length] = new Option(wards[i], wards[i]);
+            }
+        }
+    }
+</script>

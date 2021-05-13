@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body id="page-top">
+
+        <!-- Page Wrapper -->
+        <div id="wrapper">
+
+            <%- include('layouts/navbar'); -%>
+
+                <!-- Content Wrapper -->
+                <div id="content-wrapper" class="d-flex flex-column">
+
+                    <!-- Main Content -->
+                    <div id="content">
+
+                        <%- include('layouts/topbar'); -%>
+                            <!-- BOdy-->
+
+                            <!-- Begin Page Content -->
+                            <div class="container-fluid">
+                                <!-- Page Heading -->
+                                <h1 class="h3 mb-2 text-gray-800">User Information</h1>
+                                <!-- DataTales Example -->
+                                <div class="card shadow mb-4">
+                                    <div class="card-header py-3">
+                                        <h6 class="m-0 font-weight-bold text-primary">DataTables</h6>
+                                    </div>
+                                    <div class="card-body">
+                                        <form action="/user-information/<%= User._id %>">
+                                            <div class="form-group">
+                                                <label>ID</label>
+                                                <input name="_id" class="form-control" value="<%= user._id %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="firstName">FirstName</label>
+                                                <input id="firstName" name="firstName" class="form-control" value="<%= user.firstName %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="lastName">LastName</label>
+                                                <input id="lastName" name="lastName" class="form-control" value="<%= user.lastName %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="dateOfBirth">Date Of Birth</label>
+                                                <input type="tel" id="dateOfBirth" name="dateOfBirth" class="form-control" value="<%= user.dateOfBirth %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="gender">Gender</label>
+                                                <input type="gender" id="gender" name="gender" class="form-control" value="<%= user.gender %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="phoneNumber">Phone Number</label>
+                                                <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" value="<%= user.phoneNumber %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="province">Province</label>
+                                                <input type="province" id="province" name="province" class="form-control" value="<%= user.province %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="district">District</label>
+                                                <input type="district" id="district" name="district" class="form-control" value="<%= user.district %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="province">Wards</label>
+                                                <input type="wards" id="wards" name="wards" class="form-control" value="<%= user.wards %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="specificAddress">Specific Address</label>
+                                                <input type="specificAddress" id="specificAddress" name="specificAddress" class="form-control" value="<%= user.specificAddress %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="userName">User Name</label>
+                                                <input type="userName" id="userName" name="userName" class="form-control" value="<%= user.userName %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="points">Points</label>
+                                                <input type="points" id="points" name="points" class="form-control" value="<%= user.points %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="refCode">RefCode</label>
+                                                <input type="refCode" id="refCode" name="refCode" class="form-control" value="<%= user.refCode %>" disabled/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="avatar">Avatar Collection Member</label> <br>
+                                                <img src="/public/upload/<%= User.avatar %>">
+                                            </div>
+                                            <input class="btn btn-primary btn-create" type="button" value="Delete Account" onclick="handleDeleteProduct('<%= user.id %>')">
+                                            <a href="/list-user" class="btn btn-primary" type="submit">Return</a>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end body-->
+
+                    </div>
+                    <!-- End of Main Content -->
+                    <script>
+                        function handleDeleteProduct(value) {
+                            $.ajax({
+                                url: '/information-user/' + value,
+                                type: 'DELETE',
+                                success: function(result) {
+                                    $(location).attr('href', '/list-user');
+                                }
+                            })
+                        }
+                    </script>
+                    <%- include('layouts/footer'); -%>
+
+                </div>
+                <!-- End of Content Wrapper -->
+
+        </div>
+        <!-- End of Page Wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <%- include('layouts/logout'); -%>
+
+            <!-- Bootstrap core JavaScript-->
+            <%- include('layouts/script'); -%>
+
+    </body>
+
+</html>

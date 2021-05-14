@@ -1,4 +1,5 @@
-const mongooes = require('mongoose')
+const mongooes = require('mongoose');
+const bcrypt = require('bcrypt')
 
 var collectorSchema = mongooes.Schema({
     resourseType: {
@@ -35,7 +36,10 @@ var collectorSchema = mongooes.Schema({
         type: String
     },
     collectorName: {
-        type: String
+        type: String,
+        required: true,
+        unique: true,
+        index: true
     },
     password: {
         type: String
@@ -50,6 +54,15 @@ var collectorSchema = mongooes.Schema({
     type: {
         type: Number
     },
-})
+});
+
+collectorSchema.pre('save', function(next) {
+    const collector = this;
+    bcrypt.hash(collector.password, 10, (error, hash) => {
+        collector.password = hash;
+        next();
+    });
+});
+
 
 mongooes.model('CollectionMember', collectorSchema);

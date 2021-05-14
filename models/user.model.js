@@ -1,4 +1,5 @@
-const mongooes = require('mongoose')
+const mongooes = require('mongoose');
+const bcrypt = require('bcrypt')
 
 var userSchema = mongooes.Schema({
     resourseType: {
@@ -37,7 +38,9 @@ var userSchema = mongooes.Schema({
         }
     },
     userName: {
-        type: String
+        type: String,
+        required: true,
+        unique: true
     },
     points: {
         type: Number
@@ -55,6 +58,14 @@ var userSchema = mongooes.Schema({
     type: {
         type: Number
     },
-})
+});
+
+userSchema.pre('save', function(next) {
+    const user = this;
+    bcrypt.hash(user.password, 10, (error, hash) => {
+        user.password = hash;
+        next();
+    });
+});
 
 mongooes.model('User', userSchema);

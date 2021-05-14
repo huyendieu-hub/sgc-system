@@ -9,3 +9,4 @@
 8. Cài đặt morgan: npm i morgan
 9. npm install express-validator
 10. Cài đặt multer: npm i multer
+11. npm i -save bcrypt

@@ -38,7 +38,7 @@ exports.NewCollectionMember = function(req, res) {
             console.log("Error 1");
         } else {
             collectionMember.resourceType = "Create Collection Member";
-            collectionMember.collectorId = req.body.collectorId;
+            collectionMember._id = req.body._id;
             collectionMember.firstname = req.body.firstname;
             collectionMember.lastname = req.body.lastname;
             collectionMember.dateOfBirth = req.body.dateOfBirth;

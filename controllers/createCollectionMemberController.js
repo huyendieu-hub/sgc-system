@@ -50,12 +50,14 @@ exports.NewCollectionMember = function(req, res) {
             collectionMember.specificAddress = req.body.specificAddress;
             collectionMember.collectorName = req.body.collectorName;
             collectionMember.password = req.body.password;
+
+
             if (req.file == undefined) {
                 collectionMember.avatar = null;
             } else {
                 var fullPath = "collectionMember/" + req.file.filename;
                 collectionMember.avatar = fullPath;
-            }
+            };
         };
         console.log(collectionMember);
         collectionMember.save((err, doc) => {

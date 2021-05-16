@@ -9,26 +9,26 @@ router.get('/create-collection-member', (req, res) => {
 });
 
 router.post('/create-collection-member', (req, res) => {
-    [
-        check('password', 'You password mút be at least 6 character').isLength({ min: 6 })
-    ],
-    (function(req, res, next) {
-        var messages = req.flash('error');
-        const result = validationResult(req);
-        var errors = result.errors;
-        if (!result.isEmpty()) {
-            var messages = [];
-            errors.forEach(function(error) {
-                messages.push(error.msg);
-            });
-            res.render('/create-collection-member', {
-                messages: messages,
-                hasErrors: messages.length > 0,
-            });
-        } else {
-            next();
-        }
-    });
+    // [
+    //     check('password', 'You password must be at least 6 characters').isLength({ min: 6 })
+    // ],
+    // (function(req, res, next) {
+    //     var messages = req.flash('error');
+    //     const result = validationResult(req);
+    //     var errors = result.errors;
+    //     if (!result.isEmpty()) {
+    //         var messages = [];
+    //         errors.forEach(function(error) {
+    //             messages.push(error.msg);
+    //         });
+    //         res.render('/create-collection-member', {
+    //             messages: messages,
+    //             hasErrors: messages.length > 0,
+    //         });
+    //     } else {
+    //         next();
+    //     }
+    // });
     create_collector.NewCollectionMember(req, res);
 });
 

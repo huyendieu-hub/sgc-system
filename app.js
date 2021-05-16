@@ -16,6 +16,8 @@ const collectionMemberInfoRoute = require('./routes/collectionMemberInfoRoute');
 const listUserRoute = require('./routes/listUserRoute');
 const infoUserRoute = require('./routes/infoUserRoute');
 
+const pagesRoute = require('./routes/pagesRoute');
+
 app.use(express.static('public'))
 
 app.set('view engine', 'ejs')
@@ -36,6 +38,8 @@ app.use('/', listCollectionMemberRoute);
 app.use('/member-information/', collectionMemberInfoRoute);
 app.use('/', listUserRoute);
 app.use('/user-information', infoUserRoute);
+
+app.use('/', pagesRoute);
 
 
 // app.use(function(req, res, next) {

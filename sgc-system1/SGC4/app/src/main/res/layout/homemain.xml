@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D3D3D3">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarmanhinhchinh"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#5BAF5E"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/menu_drawer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/iconmenu"
+            ></ImageView>
+        <ImageView
+            android:id="@+id/menu_drawer1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ava"
+            android:layout_marginLeft="340dp"
+            ></ImageView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="53dp"
+        android:layout_height="41dp"
+        app:srcCompat="@drawable/ava"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="586dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="53dp"
+        android:layout_height="41dp"
+        app:srcCompat="@drawable/ava"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="627dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="195dp"
+        android:layout_height="109dp"
+        android:background="#FFFFFF"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="92dp">
+
+        <TextView
+            android:id="@+id/textView170"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quận Cầu Giấy"
+            tools:ignore="DuplicateIds"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="4dp" />
+
+        <TextView
+            android:id="@+id/textView180"
+            android:layout_width="170dp"
+            android:layout_height="47dp"
+            android:text="1. 79 Đường Hồ Tùng Mậu , Mai Dịch , Cầu Giấy , Hà Nội , Việt Nam , Đại học Thương Mại"
+            android:textSize="10sp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="28dp" />
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="166dp"
+            android:layout_height="29dp"
+            android:text="2. Hà Đô Park View Phố Thành Thái"
+            android:textSize="10sp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="75dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ĐIỂM ĐẶT BOX"
+        android:textColor="#1A5E1D"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="65dp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="195dp"
+        android:layout_height="83dp"
+        android:background="#FFFFFF"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="202dp"
+        tools:layout_editor_absoluteY="204dp">
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quận Từ Liêm"
+            tools:layout_editor_absoluteX="47dp"
+            tools:layout_editor_absoluteY="4dp" />
+
+        <TextView
+            android:id="@+id/textView18"
+            android:layout_width="170dp"
+            android:layout_height="47dp"
+            android:text="1. Chung Cư VOV Mễ Trì , Lương Thế Vinh , Chung cư VOV , Mễ Trì , Từ Liêm , Hà Nội"
+            android:textSize="10sp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="28dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="172dp"
+        android:layout_height="205dp"
+        app:srcCompat="@drawable/traidat"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="293dp"
+        android:layout_height="44dp"
+        android:text="Hướng dẫn phân loại rác"
+        app:backgroundTint="#3B973E"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="287dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="378dp"
+        android:layout_height="142dp"
+        app:srcCompat="@drawable/thongdiep1"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="342dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bảng vàng thu gom"
+        android:textColor="#1E6721"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="484dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hôm nay"
+        android:textColor="#1E6721"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="511dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tháng này"
+        android:textColor="#1E6721"
+        tools:layout_editor_absoluteX="231dp"
+        tools:layout_editor_absoluteY="511dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="53dp"
+        android:layout_height="41dp"
+        app:srcCompat="@drawable/ava"
+        tools:layout_editor_absoluteX="73dp"
+        tools:layout_editor_absoluteY="545dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lê Thị Mai Anh"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="556dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Hải Hà"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="597dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nguyễn Hải Hà"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="637dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="200 điểm"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="556dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="130 điểm"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="597dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="130 điểm"
+        tools:layout_editor_absoluteX="283dp"
+        tools:layout_editor_absoluteY="637dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

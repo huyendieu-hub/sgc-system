@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_gioithieu"
+            android:icon="@drawable/gioithieu"
+            android:title="@string/menu_gioithieu"
+            />
+        <item
+            android:id="@+id/nav_huongdan"
+            android:icon="@drawable/huongdan"
+            android:title="@string/menu_huongdan" />
+        <item
+            android:id="@+id/nav_datlich"
+            android:icon="@drawable/datlich"
+            android:title="@string/menu_datlich" />
+        <item
+            android:id="@+id/nav_moibanbe"
+            android:icon="@drawable/moibanbe"
+            android:title="@string/menu_moibanbe" />
+        <item
+            android:id="@+id/nav_dangky"
+            android:icon="@drawable/dangky"
+            android:title="@string/menu_dangky" />
+        <item
+            android:id="@+id/nav_doitac"
+            android:icon="@drawable/doitac"
+            android:title="@string/menu_doitac" />
+        <item
+            android:id="@+id/nav_phanhoi"
+            android:icon="@drawable/phanhoi"
+            android:title="@string/menu_phanhoi" />
+        </group>
+</menu>
